@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/style.css" />
+    <title>#</title>
+    <script>
+        function aboutus() {
+            // document.getElementById('maincontent').src='about.html';
+            alert("you page is loaded");
+        }
+
+        /* function resizeIFrameToFitContent(iFrame ) {
+ 
+             iFrame .width = iFrame.contentWindow.document.body.scrollWidth;
+             iFrame .height = iFrame.contentWindow.document.body.scrollHeight;
+         }
+ 
+         window.addEventListener('DOMContentLoaded', function (e) {
+ 
+             var iFrame = document.getElementById('targetframe');
+             resizeIFrameToFitContent(iFrame);
+ 
+             // or, to resize all iframes:
+             var iframes = document.querySelectorAll("iframe");
+             for (var i = 0; i < iframes.length; i++) {
+                 resizeIFrameToFitContent(iframes[i]);
+             }
+         });*/
+
+        function autoResize(iframe) {
+            $(iframe).height($(iframe).contents().find('html').height());
+        }
+    </script>
+</head>
+
+<body>
+    <div class="topheader">
+        <div style="align-items: left;">
+            <img src="../images/logo.png" alt="my log" />
+        </div>
+        <div class="headmenu">
+            <a href="about.html" target="targetframe">About JClare</a>
+            <a href="how_we_it.html" target="targetframe">How We Do IT</a>
+            <a href="ourservices.html" target="targetframe">Service We Give</a>
+            <a href="contactus.html" target="targetframe">Talk To us</a>
+        </div>
+
+    </div>
+    <iframe id="maincontent" src="about.html" name="targetframe" scrolling="auto" allowTransparency="true"
+        frameborder="0">
+        <div>
+            <p>This is the main content</p>
+        </div>
+
+    </iframe>
+    <div id="footer">
+        Copyright @ JClare Limited The Joseph Ayoma project 2021
+    </div>
+
+</body>
+
+</html>
